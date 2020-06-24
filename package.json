@@ -5,9 +5,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "convert": "node convert.js"
   },
   "dependencies": {
+    "glob": "^7.1.6",
     "iconv": "^3.0.0"
   }
 }

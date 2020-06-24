@@ -1,20 +1,18 @@
 const fs = require('fs');
-const Iconv = require('iconv').Iconv;
+const glob = require('glob');
 
 
 
-const path = 'Res/ReadMe.txt';
-const options = {
-  encoding: 'binary', // 'buffer' 'utf8'
-  flag: 'r'
-};
-const data = fs.readFileSync(path, options);
+glob('**/*.html', {}, (err, files) => { //
+  files.forEach((path) => {
+    const html = fs.readFileSync(path, { encoding: 'utf8' });
+  });
+  console.log('**/*.html - done');
+});
 
-
-const buf = new Buffer(data, 'binary');
-const conv = Iconv('windows-1251', 'utf8');
-const body = conv.convert(buf).toString();
-
-
-console.log(body)
-fs.writeFileSync(path, body);
+glob('**/*.dat', {}, (err, files) => {
+  files.forEach((path) => {
+    const html = fs.readFileSync(path, { encoding: 'utf8' });
+  });
+  console.log('**/*.dat - done');
+});
