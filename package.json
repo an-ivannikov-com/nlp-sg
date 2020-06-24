@@ -1,0 +1,7 @@
+{
+  "name": "nlp-sg",
+  "version": "1.0.0",
+  "description": "nlp-sg",
+  "main": "index.js",
+  "license": "MIT"
+}
